@@ -42,12 +42,12 @@ namespace API.Controllers
             return new UserDto
             {
                 UserName = user.UserName,
-                Token = _tokenService.CraateToken(user)
+                Token = _tokenService.CreateToken(user)
 
             };
 
         }
-
+        
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto logindto)
         {
@@ -69,7 +69,7 @@ namespace API.Controllers
             return new UserDto
             {
                 UserName = user.UserName,
-                Token = _tokenService.CraateToken(user)
+                Token = _tokenService.CreateToken(user)
 
             };
 
